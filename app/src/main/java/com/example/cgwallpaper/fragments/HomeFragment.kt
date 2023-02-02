@@ -5,9 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.cgwallpaper.R
 import com.example.cgwallpaper.databinding.FragmentHomeBinding
+import com.example.cgwallpaper.viewModel.HomeViewModel
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -20,6 +22,13 @@ class HomeFragment : Fragment() {
     private lateinit var googleSignInOptions: GoogleSignInOptions
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var auth: FirebaseAuth
+
+    private val mode: HomeViewModel by activityViewModels()
+
+    companion object{
+        lateinit var binding: FragmentHomeBinding
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,10 +48,18 @@ class HomeFragment : Fragment() {
 
         googleSignInClient = GoogleSignIn.getClient(requireContext(), googleSignInOptions)
 
-        binding.signOut.setOnClickListener {
+        /*binding.signOut.setOnClickListener {
            googleSignInClient.signOut()
            auth.signOut()
            findNavController().navigate(R.id.action_homeFragment2_to_googleSignInFragment)
+        }*/
+
+
+    }
+
+    private fun setUpToolbar() {
+        binding.toolbar.apply {
+
         }
     }
 

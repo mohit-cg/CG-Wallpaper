@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomeFragment">
 
-    <Button
+    <!--<Button
         android:layout_width="150dp"
         android:layout_height="75dp"
         android:layout_gravity="center"
         android:text="Sign Out"
         android:id="@+id/sign_out"
+        />-->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/toolbar"
+        app:menu="@menu/toolbar_menu"
+        app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
         />
 
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/recycler_view"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/recycler_item"
+        tools:itemCount="100"
+        app:spanCount="2"
+        />
+
+</RelativeLayout>

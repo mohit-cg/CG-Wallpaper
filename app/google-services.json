@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "103760475114",
+    "project_id": "cg-wallpaper-d66e9",
+    "storage_bucket": "cg-wallpaper-d66e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103760475114:android:e067d6202cc004c6777893",
+        "android_client_info": {
+          "package_name": "com.example.cgwallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103760475114-oe972hhnd68a5gf027l544r3b56brsjm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy5RI4RiTKiLut0eK3zad4GsihvHHrhmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103760475114-oe972hhnd68a5gf027l544r3b56brsjm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
